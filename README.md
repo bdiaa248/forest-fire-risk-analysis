@@ -1,5 +1,7 @@
 # Forest Fire Risk Analysis – Montesinho Natural Park
 
+![Excel](https://img.shields.io/badge/Microsoft%20Excel-217346?style=for-the-badge&logo=microsoft-excel&logoColor=white) ![Data Analysis](https://img.shields.io/badge/Data%20Analysis-Project-blue?style=for-the-badge) ![Status](https://img.shields.io/badge/Status-Completed-success?style=for-the-badge)
+
 ## Project Overview
 Wildfires represent a significant environmental and economic threat, particularly in protected natural areas.  
 This project analyzes historical wildfire data from **Montesinho Natural Park (Portugal)** to identify high-risk environmental conditions and geographic zones associated with increased fire frequency and severity.
@@ -21,14 +23,14 @@ The analysis is conducted from the perspective of a data analyst supporting wild
 ---
 
 ## Dataset Summary
-- **Source:** Historical wildfire records from Montesinho Natural Park
-- **Time Period:** 2000 – 2003
-- **Granularity:** Each row represents a single fire event
+- **Source:** Historical wildfire records from Montesinho Natural Park.
+- **Time Period:** 2000 – 2003.
+- **Granularity:** Each row represents a single fire event.
 - **Key Features:**
-  - Spatial coordinates (X, Y)
-  - Weather conditions (temperature, relative humidity, wind, rainfall)
-  - Fire Weather Index components (FFMC, DMC, DC, ISI)
-  - Burned area (hectares)
+  - **Spatial coordinates (X, Y):** Geographic location within the park map.
+  - **Weather conditions:** Temperature, Relative Humidity (RH), Wind speed, Rainfall.
+  - **Fire Weather Index (FWI) components:** FFMC, DMC, DC, ISI.
+  - **Target Variable:** Burned area (hectares).
 
 ---
 
@@ -37,9 +39,9 @@ Initial exploration focuses on understanding distributions and patterns in key w
 
 **Key Observations:**
 - Most fire events result in very small burned areas.
-- The burned area distribution is highly right-skewed, with rare but extreme fire events.
-- Temperature shows a relatively symmetric distribution.
-- ISI is right-skewed, indicating that most fires have low spread potential, with a few high-risk cases.
+- The burned area distribution is highly right-skewed, indicating rare but extreme fire events drive the total damage.
+- Temperature follows a relatively symmetric (normal) distribution.
+- **ISI (Initial Spread Index)** is right-skewed, indicating that while most days have low spread potential, specific days carry extreme risk.
 
 ![EDA](screenshots/EDA.png)
 
@@ -52,19 +54,19 @@ Scatter plots and correlation metrics were used to examine relationships between
 - **Temperature vs Initial Spread Index (ISI):** Moderate positive correlation.
 - **Temperature vs Relative Humidity (RH):** Moderate negative correlation.
 
-These relationships suggest that higher temperatures are associated with drier conditions and increased wildfire risk, though temperature alone does not fully explain extreme fire behavior.
+*Insight:* These relationships suggest that higher temperatures contribute to drier conditions and increased wildfire risk, though temperature alone is not the sole predictor of extreme fire behavior.
 
 ![Correlation Analysis](screenshots/Correlation Analysis.png)
 
 ---
 
 ## Geographic Risk Segmentation
-Geographic segmentation was performed using spatial coordinates to identify regions with elevated wildfire risk.
+Geographic segmentation was performed using spatial coordinates (X, Y) to identify regions with elevated wildfire risk.
 
 **Key Findings:**
 - Fire events are not evenly distributed across the park.
-- Certain regions experience significantly higher fire frequency and drought severity.
-- Distinct geographic zones can be classified into different fire risk levels (High, Moderate, Low).
+- Certain coordinates show significantly higher fire frequency (Hotspots).
+- Distinct geographic zones can be classified into different fire risk levels (High, Moderate, Low) based on historical occurrence and drought severity.
 
 ![Geographic Risk Segmentation](screenshots/Geographic Risk Segmentation.png)
 
@@ -74,30 +76,31 @@ Geographic segmentation was performed using spatial coordinates to identify regi
 A consolidated summary of key insights and recommendations derived from the analysis.
 
 **Highlights:**
-- Rare extreme fires drive most of the total burned area.
-- Temperature and drought indicators (DC, ISI) are critical early warning signals.
-- Geographic risk-based resource allocation is more effective than uniform distribution.
+- **Outliers Matter:** Rare, extreme fires are responsible for the vast majority of ecological damage.
+- **Early Warning:** Drought indicators (DC) and spread indices (ISI) act as critical early warning signals.
+- **Spatial Strategy:** Resource allocation based on geographic risk hotspots is more effective than uniform distribution.
 
 ![Executive Summary](screenshots/executive_summary.png)
 
 ---
 
 ## Business / Operational Recommendations
-1. Prioritize monitoring, patrols, and early warning systems in high-risk geographic zones.
-2. Allocate wildfire prevention resources based on spatial risk segmentation.
-3. Use drought severity (DC) and fire spread indicators (ISI) as early signals for intervention.
-4. Focus on proactive prevention rather than reactive fire suppression.
+1. **Targeted Monitoring:** Prioritize patrols and surveillance in identified high-risk geographic zones (Hotspots).
+2. **Resource Allocation:** Distribute firefighting resources based on the spatial risk segmentation map.
+3. **Proactive Intervention:** Use Drought Code (DC) and ISI thresholds to trigger pre-emptive alerts before fires start.
+4. **Focus on Prevention:** Shift focus from reactive suppression to proactive prevention in high-risk seasons.
 
 ---
 
 ## Tools Used
-- Microsoft Excel
-- Pivot Tables
-- Exploratory Data Analysis (EDA)
-- Correlation Analysis
-- Geographic Risk Segmentation
-- Data Visualization
+- **Microsoft Excel:** Data Cleaning, Pivot Tables, Statistical Functions.
+- **Data Analysis Techniques:** EDA, Correlation Analysis, Segmentation.
+- **Visualization:** Histograms, Scatter Plots, Heatmaps.
 
 ---
 
-*Created by Abdelrahman Diaa*
+## Author
+**Created by Abdelrahman Diaa** *Aspiring AI & GeoAI Engineer | GIS Student blending Spatial Analysis with Data Science.*
+
+Connect with me on LinkedIn:  
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-Connect-blue?style=for-the-badge&logo=linkedin)](https://www.linkedin.com/in/abdelrahman-diaa-080496334/)
